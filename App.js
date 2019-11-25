@@ -1,6 +1,6 @@
 import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
-import ComponentScreen from './screens/ComponentScreen';
+import TentangAplikasiScreen from './screens/TentangAplikasiScreen';
 import HomeScreen from './screens/HomeScreen';
 import KostCewekScreen from './screens/KostCewekScreen';
 import KostCowokScreen from './screens/KostCowokScreen';
@@ -8,7 +8,7 @@ import { createStackNavigator, createAppContainer } from 'react-navigation';
 
 
 const navigator = createStackNavigator({
-  Component: ComponentScreen,
+  TentangAplikasi: TentangAplikasiScreen,
   Cewek: KostCewekScreen,
   Home: HomeScreen,
   Cowok: KostCowokScreen

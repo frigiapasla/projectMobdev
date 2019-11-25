@@ -5,20 +5,23 @@ const HomeScreen = ({ navigation }) => {
     
     return (
         <ImageBackground source={require('../assets/app_background.jpg')} style={{width: "100%", height: "100%"}}>
-        <View>  
-        <TouchableOpacity style={[styles.buttonContainer, styles.cewekButton]} onPress={() => navigation.navigate('Cewek')}>
-          <Text style={styles.loginText}>Kost Cewek</Text>
-        </TouchableOpacity>
-        
-        <TouchableOpacity style={[styles.buttonContainer, styles.cowokButton]} onPress={() => navigation.navigate('Cowok')}>
-          <Text style={styles.loginText}>Kost Cowok</Text>
-        </TouchableOpacity>
- 
+        <View style={styles.homeLayout}> 
+          <View style={styles.column}>
+            <TouchableOpacity style={[styles.buttonContainer, styles.cewekButton]} onPress={() => navigation.navigate('Cewek')}>
+              <Text style={styles.textCentered}>Kost Cewek</Text>
+            </TouchableOpacity>
+            
+            <TouchableOpacity style={[styles.buttonContainer, styles.cowokButton]} onPress={() => navigation.navigate('Cowok')}>
+              <Text style={styles.textCentered}>Kost Cowok</Text>
+            </TouchableOpacity>
+          </View>
+  
+          <View style={styles.column}>
+            <TouchableOpacity style={[styles.buttonContainer, styles.buttonButton]} onPress={() => navigation.navigate('TentangAplikasi')}>
+              <Text style={styles.textCentered}>Tentang Aplikasi</Text>
+            </TouchableOpacity>
+          </View>
         </View>
-
-        <TouchableOpacity style={[styles.buttonContainer, styles.buttonButton]} onPress={() => navigation.navigate('Component')}>
-          <Text style={styles.loginText}>Component Screen</Text>
-        </TouchableOpacity>
         </ImageBackground>
         
     );
@@ -26,17 +29,28 @@ const HomeScreen = ({ navigation }) => {
 const resizeMode = 'center';
 
 const styles = StyleSheet.create({
-    
-    buttonContainer: {
-      height:45,
+    homeLayout: {
+      flex: 1,
+      flexDirection: 'column',
+      justifyContent: 'center',
+      alignItems: 'center'
+    },
+    column: {
+      flex: 1,
+      width: 100,
       flexDirection: 'row',
       justifyContent: 'center',
       alignItems: 'center',
-      marginTop: 100,
+    },
+    buttonContainer: {
+      height:150,
+      justifyContent: 'center',
+      alignItems: 'center',
+      marginTop: 50,
+      marginHorizontal: 10,
       marginBottom:50,
-      marginEnd: 100,
-      width:300,
-      borderRadius:30,
+      width:150,
+      borderRadius:100,
     },
     cowokButton: {
       backgroundColor: "#00CED1",
