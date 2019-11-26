@@ -4,6 +4,9 @@ import TentangAplikasiScreen from './screens/TentangAplikasiScreen';
 import HomeScreen from './screens/HomeScreen';
 import KostCewekScreen from './screens/KostCewekScreen';
 import KostCowokScreen from './screens/KostCowokScreen';
+import CalculateScreen from './screens/CalculateScreen';
+import Thanks from './screens/Thanks';
+
 import { createStackNavigator, createAppContainer } from 'react-navigation';
 
 
@@ -11,7 +14,9 @@ const navigator = createStackNavigator({
   TentangAplikasi: TentangAplikasiScreen,
   Cewek: KostCewekScreen,
   Home: HomeScreen,
-  Cowok: KostCowokScreen
+  Cowok: KostCowokScreen,
+  Calculate: CalculateScreen,
+  trims: Thanks
 },{
   initialRouteName: 'Home',
   defaultNavigationOptions: {
